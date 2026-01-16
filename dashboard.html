@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOC Incident Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🛡️ SOC Incident Response Dashboard</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>Event Count</th>
+                <th>Event Types</th>
+                <th>Severity</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for incident in incidents %}
+            <tr>
+                <td>{{ incident.ip }}</td>
+                <td class="center">{{ incident.events }}</td>
+                <td>{{ incident.event_types }}</td>
+
+                {% if incident.severity == "High" %}
+                    <td class="high center">{{ incident.severity }}</td>
+                {% elif incident.severity == "Medium" %}
+                    <td class="medium center">{{ incident.severity }}</td>
+                {% else %}
+                    <td class="low center">{{ incident.severity }}</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

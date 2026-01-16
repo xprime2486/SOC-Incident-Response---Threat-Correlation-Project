@@ -1,0 +1,75 @@
+/* GLOBAL */
+body {
+    background: linear-gradient(180deg, #020617, #020617);
+    color: #e5e7eb;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* CONTAINER */
+.container {
+    width: 95%;
+    margin: 40px auto;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    color: #38bdf8;
+    margin-bottom: 30px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 🔥 KEY FIX */
+    background-color: #020617;
+}
+
+/* HEADERS */
+th {
+    padding: 14px;
+    color: #38bdf8;
+    border-bottom: 2px solid #1e293b;
+    text-align: left;
+}
+
+/* CELLS */
+td {
+    padding: 14px;
+    border-bottom: 1px solid #1e293b;
+    word-wrap: break-word;
+}
+
+/* COLUMN WIDTH CONTROL */
+th:nth-child(1), td:nth-child(1) { width: 20%; }
+th:nth-child(2), td:nth-child(2) { width: 15%; }
+th:nth-child(3), td:nth-child(3) { width: 45%; }
+th:nth-child(4), td:nth-child(4) { width: 20%; }
+
+/* CENTER ALIGN */
+.center {
+    text-align: center;
+}
+
+/* HOVER */
+tr:hover {
+    background-color: #020617;
+}
+
+/* SEVERITY */
+.high {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.medium {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.low {
+    color: #22c55e;
+    font-weight: bold;
+}
+
